@@ -3,7 +3,7 @@ package services
 import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"github.com/goVueAuth/model"
+	"github.com/golangBaseProject/model"
   )
   
 var Db *gorm.DB

@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/goVueAuth/model"
-	"github.com/goVueAuth/services"
+	"github.com/golangBaseProject/model"
+	"github.com/golangBaseProject/services"
 	"golang.org/x/crypto/bcrypt"
 )
 

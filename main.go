@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/goVueAuth/services"
-	"github.com/goVueAuth/routes"
+	"github.com/golangBaseProject/services"
+	"github.com/golangBaseProject/routes"
 
 )
 
