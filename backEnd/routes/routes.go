@@ -26,7 +26,7 @@ func Setup(r *gin.Engine){
 	
 	// HOME 
 	home := r.Group("/api")
-	//home.Use(services.AuthorizationRequired())
+	home.Use(services.AuthorizationRequired())
 	{
 		home.GET("/ping", controller.Example)
 		home.GET("/getAllUsers", controller.GetAllUsers)

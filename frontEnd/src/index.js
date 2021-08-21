@@ -7,10 +7,6 @@ import App from './app/App';
 
 Vue.use(VeeValidate);
 
-// setup fake backend
-// import { configureFakeBackend } from './_helpers';
-// configureFakeBackend();
-
 new Vue({
     el: '#app',
     router,

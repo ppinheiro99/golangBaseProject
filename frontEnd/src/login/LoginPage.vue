@@ -45,7 +45,7 @@ export default {
             this.submitted = true;
             const { email, password } = this;
             if (email && password) {
-                //this.login({ email, password })
+                this.login({ email, password })
                 userService.login(email, password)
             }
         }
