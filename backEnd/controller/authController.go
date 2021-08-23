@@ -20,7 +20,7 @@ func Register(c *gin.Context){
 	var usr model.Users
 
 	if err := c.ShouldBindJSON(&usr); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"}) // Ver melhor estes "prints" de erros
+		c.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "message": "Bad request!"}) 
 		return
 	}
 	if len(usr.Email) < 8 || len(usr.Email) > 254 {
