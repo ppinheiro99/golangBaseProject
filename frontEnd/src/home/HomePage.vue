@@ -7,7 +7,7 @@
                 {{user.ID + ' ' + user.email}}
                 <span v-if="user.deleting"><em> - Deleting...</em></span>
                 <span v-else-if="user.deleteError" class="text-danger"> - ERROR: {{user.deleteError}}</span>
-                <span v-else> - <a @click="deleteUser(user.id)" class="text-danger">Delete</a></span>
+                <span to="/HomePage" v-else> - <a @click="deleteUser(user.ID)" class="text-danger">Delete</a></span>
             </li>
         </ul>
         <p>
@@ -33,12 +33,10 @@ export default {
         userService.getAll()
     },
     methods: {
-        ...mapActions('users', {
-            deleteUser(){
-                // FALTA FAZER A ROTA NO BACKEND PARA REMOVER UTILIZADORES
-                // FALTA CORRIGIR O PROBLEMA DA AUTENTICAÇÃO 
+            deleteUser(id){
+                console.log(id)
+                userService.delete(id)
             }
-        })
     }
 };
 </script>

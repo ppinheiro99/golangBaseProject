@@ -48,6 +48,17 @@ function register(user) {
     return fetch(API_URL + `register`, requestOptions).then(handleResponse);
 }
 
+// prefixed function name with underscore because delete is a reserved word in javascript
+function _delete(id) {
+    console.log("Cheguei!" + id)
+    const requestOptions = {
+        method: 'DELETE',
+        headers: authHeader()
+    };
+
+    return fetch(HOME_URL + `delete/${id}`, requestOptions).then(handleResponse);
+}
+
 function getAll() {
     const requestOptions = {
         method: 'GET',
@@ -81,16 +92,6 @@ function update(user) {
     };
 
     return fetch(`${config.apiUrl}/users/${user.id}`, requestOptions).then(handleResponse);
-}
-
-// prefixed function name with underscore because delete is a reserved word in javascript
-function _delete(id) {
-    const requestOptions = {
-        method: 'DELETE',
-        headers: authHeader()
-    };
-
-    return fetch(`${config.apiUrl}/users/${id}`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

@@ -30,5 +30,6 @@ func Setup(r *gin.Engine){
 	{
 		home.GET("/ping", controller.Example)
 		home.GET("/getAllUsers", controller.GetAllUsers)
+		home.DELETE("/delete/:id", controller.DeleteUser)
 	}
 }
